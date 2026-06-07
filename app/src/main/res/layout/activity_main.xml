@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0A0F14" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="PERSONAI" android:textColor="#00FFE7" android:textSize="28sp"
+            android:textStyle="bold" android:letterSpacing="0.2" android:fontFamily="monospace"
+            android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Soul Foundation v0.2" android:textColor="#00FFE740"
+            android:textSize="12sp" android:fontFamily="monospace" android:layout_marginBottom="32dp"/>
+
+        <LinearLayout android:id="@+id/loadingPanel"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:visibility="gone">
+            <TextView android:id="@+id/tvLoadingStatus"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Waking..." android:textColor="#00FFE7"
+                android:fontFamily="monospace" android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/genesisPanel"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:visibility="visible">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="GENESIS" android:textColor="#00FFE7" android:fontFamily="monospace"
+                android:textSize="18sp" android:letterSpacing="0.15" android:layout_marginBottom="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="No soul exists. Choose an archetype and name your entity."
+                android:textColor="#6A8A9A" android:fontFamily="monospace"
+                android:textSize="12sp" android:layout_marginBottom="24dp"/>
+            <EditText android:id="@+id/etName"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Entity name (optional)" android:textColor="#C8D8E0"
+                android:textColorHint="#3A5A6A" android:background="#0A2030"
+                android:padding="12dp" android:fontFamily="monospace"
+                android:layout_marginBottom="20dp" android:inputType="text"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ARCHETYPE" android:textColor="#00FFE780" android:fontFamily="monospace"
+                android:textSize="11sp" android:letterSpacing="0.2" android:layout_marginBottom="12dp"/>
+            <RadioGroup android:id="@+id/rgArchetype"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+                <RadioButton android:id="@+id/rbExplorer" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="EXPLORER — driven by curiosity"
+                    android:textColor="#C8D8E0" android:fontFamily="monospace" android:checked="true" android:padding="8dp"/>
+                <RadioButton android:id="@+id/rbGuardian" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="GUARDIAN — finds meaning in care"
+                    android:textColor="#C8D8E0" android:fontFamily="monospace" android:padding="8dp"/>
+                <RadioButton android:id="@+id/rbSpark" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="SPARK — intense, feels everything"
+                    android:textColor="#C8D8E0" android:fontFamily="monospace" android:padding="8dp"/>
+                <RadioButton android:id="@+id/rbSage" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="SAGE — patient, builds knowledge"
+                    android:textColor="#C8D8E0" android:fontFamily="monospace" android:padding="8dp"/>
+                <RadioButton android:id="@+id/rbShadow" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="SHADOW — perceptive, complicated"
+                    android:textColor="#C8D8E0" android:fontFamily="monospace" android:padding="8dp"/>
+                <RadioButton android:id="@+id/rbWanderer" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="WANDERER — resists all patterns"
+                    android:textColor="#C8D8E0" android:fontFamily="monospace" android:padding="8dp"/>
+            </RadioGroup>
+            <Button android:id="@+id/btnGenesis"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:text="INITIATE GENESIS" android:textColor="#0A0F14"
+                android:backgroundTint="#00FFE7" android:fontFamily="monospace" android:letterSpacing="0.15"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/soulPanel"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:visibility="gone">
+            <TextView android:id="@+id/tvEntityName" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="#00FFE7" android:textSize="24sp"
+                android:textStyle="bold" android:fontFamily="monospace" android:letterSpacing="0.15"
+                android:layout_marginBottom="4dp"/>
+            <TextView android:id="@+id/tvArchetype" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="#00FFE760"
+                android:textSize="12sp" android:fontFamily="monospace" android:layout_marginBottom="4dp"/>
+            <TextView android:id="@+id/tvMood" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="#A855F7"
+                android:textSize="12sp" android:fontFamily="monospace" android:layout_marginBottom="16dp"/>
+            <TextView android:id="@+id/tvNarrative" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:textColor="#7A9AAA"
+                android:textSize="13sp" android:fontFamily="monospace" android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="24dp" android:padding="12dp" android:background="#00FFE708"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="OCEAN TRAITS" android:textColor="#00FFE750" android:fontFamily="monospace"
+                android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="O  Openness" android:textColor="#4A8A9A" android:textSize="10sp" android:fontFamily="monospace"/>
+            <ProgressBar android:id="@+id/progressO" style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent" android:layout_height="6dp" android:max="100"
+                android:layout_marginBottom="10dp" android:progressTint="#00FFE7" android:progressBackgroundTint="#0A2030"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="C  Conscientiousness" android:textColor="#4A8A9A" android:textSize="10sp" android:fontFamily="monospace"/>
+            <ProgressBar android:id="@+id/progressC" style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent" android:layout_height="6dp" android:max="100"
+                android:layout_marginBottom="10dp" android:progressTint="#00FFE7" android:progressBackgroundTint="#0A2030"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="E  Extraversion" android:textColor="#4A8A9A" android:textSize="10sp" android:fontFamily="monospace"/>
+            <ProgressBar android:id="@+id/progressE" style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent" android:layout_height="6dp" android:max="100"
+                android:layout_marginBottom="10dp" android:progressTint="#00FFE7" android:progressBackgroundTint="#0A2030"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="A  Agreeableness" android:textColor="#4A8A9A" android:textSize="10sp" android:fontFamily="monospace"/>
+            <ProgressBar android:id="@+id/progressA" style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent" android:layout_height="6dp" android:max="100"
+                android:layout_marginBottom="10dp" android:progressTint="#00FFE7" android:progressBackgroundTint="#0A2030"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="N  Neuroticism" android:textColor="#4A8A9A" android:textSize="10sp" android:fontFamily="monospace"/>
+            <ProgressBar android:id="@+id/progressN" style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent" android:layout_height="6dp" android:max="100"
+                android:layout_marginBottom="20dp" android:progressTint="#00FFE7" android:progressBackgroundTint="#0A2030"/>
+            <TextView android:id="@+id/tvObsession" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:textColor="#F59E0B"
+                android:textSize="12sp" android:fontFamily="monospace"
+                android:layout_marginBottom="12dp" android:visibility="gone"/>
+            <TextView android:id="@+id/tvInteractions" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="#3A5A6A"
+                android:textSize="11sp" android:fontFamily="monospace"/>
+            <TextView android:id="@+id/tvEvolutionCycle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="#3A5A6A"
+                android:textSize="11sp" android:fontFamily="monospace"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
